@@ -1,0 +1,36 @@
+.sidebar {
+  display: flex;
+  flex: 0.35;
+  height: 100vh;
+  background-color: #35393f;
+
+  .sidebarLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f2225;
+    padding: 7px 15px;
+
+  .serverIcon {
+    width: 60px;
+    height: 60px;
+    background-color: #35393f;
+    border-radius: 999px;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 7px;
+
+    img {
+      position: absolute;
+      width: 50px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  }
+
+  .sidebarRight {
+    background-color: #303136;
+  }
+}
