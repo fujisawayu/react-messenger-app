@@ -2,5 +2,41 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background-color: #35393f
+  background-color: #35393f;
+
+  .chatMessage {
+      flex-grow: 1;
+    }
+
+  .chatInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #474b53;
+    border-radius: 5px;
+    margin: 20px;
+    color: lightgrey;
+
+    form {
+      flex-grow: 1;
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: large;
+        width: 100%;
+      }
+      .chatInputButton {
+        display: none;
+      }
+    }
+
+    .chatInputIcons {
+      .MuiSvgIcon-root {
+        padding: 5px;
+      }
+    }
+  }
 }
