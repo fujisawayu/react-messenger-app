@@ -7,6 +7,8 @@ import { useSelector } from 'react-redux';
 import { useAppDispath, useAppSelector } from './app/hooks';
 import { login, logout } from './features/userSlice';
 import { auth } from './firebase';
+import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorFallback } from './utils/ErrorFallBack';
 
 function App() {
   const user = useAppSelector((state) => state.user);
@@ -33,7 +35,9 @@ function App() {
     <div className="App">
       {user ? (
         <>
-          <Sidebar />
+          <ErrorBoundary FallbackComponent={ErrorFallback}>
+            <Sidebar />
+          </ErrorBoundary>
           <Chat />
         </>
       ) : (
