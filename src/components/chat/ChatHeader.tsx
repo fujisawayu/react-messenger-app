@@ -7,13 +7,19 @@ import SearchIcon from '@mui/icons-material/Search';
 import SendIcon from '@mui/icons-material/Send';
 import HelpIcon from '@mui/icons-material/Help';
 
-function ChatHeader() {
+type Props = {
+  channelName: string | null;
+};
+
+function ChatHeader(props: Props) {
+  const { channelName } = props;
+
   return (
     <div className="chatHeader">
       <div className="chatHeaderLeft">
         <h3>
           <span className="chatHeaderHash">#</span>
-          てすと
+          {channelName}
         </h3>
       </div>
 
