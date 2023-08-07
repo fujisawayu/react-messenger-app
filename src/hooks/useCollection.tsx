@@ -8,6 +8,7 @@ import {
   Query,
 } from 'firebase/firestore';
 import { db } from '../firebase';
+
 interface Channels {
   id: string;
   channel: DocumentData;
@@ -15,7 +16,7 @@ interface Channels {
 
 const useCollection = (data: string) => {
   const [documents, setDocumments] = useState<Channels[]>([]);
-  const collectionRef: Query<DocumentData> = query(collection(db, 'data'));
+  const collectionRef: Query<DocumentData> = query(collection(db, data));
 
   useEffect(() => {
     onSnapshot(collectionRef, (querySnapshot) => {
