@@ -86,10 +86,16 @@ function Chat() {
       {/* chatHeader */}
       <ChatHeader channelName={channelName} />
       {/* chatMessage */}
-      <div className="chatMessage"></div>
-      <ChatMessage />
-      <ChatMessage />
-      <ChatMessage />
+      <div className="chatMessage">
+        {messages.map((message, index) => (
+          <ChatMessage
+            key={index}
+            message={message.message}
+            timestamp={message.timestamp}
+            user={message.user}
+          />
+        ))}
+      </div>
       {/* chatInput */}
       <div className="chatInput">
         <AddCircleOutlineIcon />
